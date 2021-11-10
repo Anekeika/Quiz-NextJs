@@ -9,7 +9,7 @@ export default function (req, res) {
         port: 465,
         host: "smtp.gmail.com",
         auth: {
-            user: 'kogortauzao@gmail.com',
+            user: '',
             pass: process.env.password,
         },
         secure: true,
@@ -17,7 +17,7 @@ export default function (req, res) {
 
     const mailData = {
         from: 'quiz',
-        to: 'sergey_ivanov1996@mail.ru',
+        to: '',
         subject: `Quiz: answers from ${req.body.name} ${req.body.surname}`,
         text: "Имя :" + req.body.name + "Фамилия:" + req.body.surname + "Телефон:" + req.body.phone + "Как связаться:" + req.body.communication,
         html: `
