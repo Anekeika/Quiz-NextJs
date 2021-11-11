@@ -80,7 +80,7 @@ const Sending = ({answers, onSetStep, sliderValue}) => {
             }
         }
     }
-//TODO: react-input-mask
+    
     const phoneHandler = (e) => {
         setPhone(e.target.value)
         if (!e.target.value) {
@@ -105,16 +105,10 @@ const Sending = ({answers, onSetStep, sliderValue}) => {
         setPhoneDirty(true)
         setCommunicationDirty(true)
         if (formValid) {
-            // TODO: show loader
-            // await handleSubmit()
             handleSubmit()
             onSetStep(5);
         }
     }
-
-    // function changeHandler(index, e) {
-    //     setCustomerData([...customerData.slice(0, index), e.target.value, ...customerData.slice(index + 1)]);
-    // }
 
     const handleSubmit = async () => {
         console.log('Sending')
@@ -144,7 +138,6 @@ const Sending = ({answers, onSetStep, sliderValue}) => {
         })
     }
 
-//TODO: маска для телефона http://sanniassin.github.io/react-input-mask/demo.html
     return (
         <div className="card has-text-light is-size-4">
             <div className="card-content">
@@ -195,7 +188,6 @@ const Sending = ({answers, onSetStep, sliderValue}) => {
                             onChange={e => phoneHandler(e)}
                             placeholder='Введите номер телефона....'/>
                     </div>
-                    {/* http://sanniassin.github.io/react-input-mask/demo.html */}
                     <div className="control">
                         <p className="is-size-4 mb-0">Как свами лучше связаться?</p>
                         {(communicationDirty && communicationError) &&
