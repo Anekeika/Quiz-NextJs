@@ -5,20 +5,6 @@ const Question = ({data, onAnswerUpdate, numberOfQuestion, activeQuestion, onSet
     const [selected, setSelected] = useState([]);
     const [error, setError] = useState('');
 
-    // useEffect(() => {
-    //         const findCheckedInput = radioWrapper.current.querySelector('input:checked');
-    //         if (findCheckedInput) {
-    //             findCheckedInput.checked = false;
-    //         }
-    // }, [data]);
-
-    // const changeHandler = (e) => {
-    //     setSelected(e.target.value);
-    //     if (error) {
-    //         setError('');
-    //     }
-    // }
-
     function answerToggle(choice) {
         return function (e) {
             if (e.target.checked) {
